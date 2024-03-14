@@ -1,4 +1,4 @@
-AiCore project on Azure Database Migration (ADM), involving building and implementing a cloud-based database system architecture using Microsoft Azure. This README file contains an overview of the progress made, split into the revelant 'milestones'.
+AiCore project on Azure Database Migration (ADM), involving building and implementing a cloud-based database system architecture using Microsoft Azure. This README file contains an overview of the progress made, split into the revelant 'milestones'. The relevant UML diagram can be found as a .png file in this repo alongside the readme.md file, which outlines the project.
 
 Milestone 2 - Setting up the Production Environment
 - A Windows 10 Pro VM called 'adm-vm' was provisioned under the 'ADM' resource group in Azure, with network settings configured to allow RDP traffic. This VM is the primary machine for the production environment.
