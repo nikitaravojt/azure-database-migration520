@@ -1,3 +1,16 @@
+AiCore project on Azure Database Migration (ADM), involving building and implementing a cloud-based database system architecture using Microsoft Azure. This README file contains an overview of the progress made, split into the revelant 'milestones'.
+
+Milestone 2 - Setting up the Production Environment
+- A Windows 10 Pro VM called 'adm-vm' was provisioned under the 'ADM' resource group in Azure, with network settings configured to allow RDP traffic. This VM is the primary machine for the production environment.
+- A connection to the VM was established using RDP. Database infrastructure tools were installed, namely SQL Server and SSMS.
+- The local 'AdvetureWorks' database was restored from the backup file on the VM, ready for migration.
+
+Milestone 3 - Azure SQL Database Migration
+- A production database called 'adm-db' was created in Azure using SQL authentication credentials.
+- Azure Data Studio was installed on the production VM and a successful connection was established to 'adm-db'.
+- The SQL Server Schema Compare extension was utilised within Azure Data Studio to compare and migrate the schema of the restored local 'AdventureWorks' database to the newly created Azure 'adm-db' database. No migration issues were encountered according to the Azure Data Studio automated checks.
+- The Azure SQL Migration extension was utilised to migrate the data from the local database to 'adm-db'. This involved creating an Azure Database Migration Service under the 'ADM' resource group, as well as installing the integration runtime to facilitate the data migration.
+- The data migration proved successful as identified by the migration extension. The local database and 'adm-db' tables were compared to ensure all have been migrated successfully. The entry counts in all tables were also compared to ensure that all tables in the new database contained the same amount of data as in the original database. 
 
 Milestone 4 - Data Backup and Restore:
 - Full production database backup of AdventureWorks was created using SSMS and stored locally as a .bak file on the ADM-VM virtual machine at the default location.
